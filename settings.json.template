@@ -1,0 +1,212 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "DNGRcoin",
+
+  "address": "127.0.0.1:80",
+
+  // coin name
+  "coin": "DangerCoin",
+
+  // coin symbol
+  "symbol": "DNGR",
+
+  // coin type
+  //  Options:
+  //    bitcoin = Default Bitcoin/Dash/... clones
+  //    ripple = Ripple clones
+  "baseType": "bitcoin",
+
+  // The epoch time for a ripple based coin.
+  // You can ignore this setting if you're not using a ripple based coin.
+  "rippleEpoch": 1575892800,
+
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+
+  // Uses bootswatch themes (http://bootswatch.com/)
+  // Valid options:
+  //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
+  //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
+  // theme (see /public/themes for available themes)
+  "theme": "Cosmo",
+
+  // port to listen for requests on.
+  "port" : 80,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "67788uh",
+    "password": "kjh675sdf34",
+    "database": "explorerdb",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "localhost",
+    "port": 49003,
+    "user": "DangerRPC",
+    "pass": "uiu765fghy534"
+  },
+
+  // confirmations
+  "confirmations": 6,
+
+  // language settings
+  "locale": "locale/en.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": false,
+    "richlist": true,
+    "twitter": false,
+    "facebook": false,
+    "googleplus": false,
+    "search": true,
+    "movement": true,
+    "network": true,
+    "masternodes": true,
+    "coininfo": true,
+    "coinmarketcap": false
+  },
+
+  // index page (valid options for difficulty are POW, POS or Hybrid)
+  "index": {
+    "show_hashrate": true,
+    "show_coin_supply": true,
+    "difficulty": "POW",
+    "last_txs": 100
+  },
+
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 270,
+    "blockhash": "0000002277b9434a73b6790f452d54c6c6f29cba4608cdf9873a3682af5c84f9",
+    "txhash": "24f624952086246dc38170528eebadee63363b1c731ba8064905bca1214c6f43",
+    "address": "dZtCvXANxZY3DAXNfXPoDjbYopS6ZqAg18"
+  },
+
+  // market settings
+  //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "DNGR",
+    "exchange": "BTC",
+    "enabled": ["bittrex"],
+    "cryptopia_id": "1658",
+    "ccex_key" : "Get-Your-Own-Key",
+    "default": "bittrex"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": true,
+    "balance": true,
+    "coin_supply": true
+  },
+  // movement page settings
+  // min amount: show transactions greater than this value
+  // low flag: greater than this value flagged yellow
+  // high flag: greater than this value flagged red
+  "movement": {
+    "min_amount": 50,
+    "low_flag": 1000,
+    "high_flag": 5000
+  },
+
+  // Masternodes page
+  // default port: Default port a masternode is running. 
+  "masternodes": {
+    "default_port": 49002,
+
+    // Use index-based values (starting with 0).
+    // 0 is the key of the masterlist data.
+    // -1 means that the info is not available.
+    "list_format": {
+      "address": 3,
+      "status": 1,
+      "lastseen": 4,
+      "lastpaid": 6,
+      "ip": 8
+    }
+  },
+
+
+  // Coin info page
+  "coininfo": {
+    "basic_info_links": [
+      ["Github", "http://github.com/dngrcoin/dngrcoin"]
+    ],
+    "masternode_required": 5000,
+    "block_time_sec": 90,
+    "block_reward_mn": 5
+  },
+
+  // CoinMarketCap integration
+  "coinmarketcap": {
+    "ticker": "BTC"
+  },
+
+  // twitter, facebook, googleplus
+  "twitter": "dngrcoin",
+  "facebook": "yourfacebookpage",
+  "googleplus": "yourgooglepluspage",
+
+  //genesis
+  "genesis_tx": "7123ced7a772e8380a5145cde9511454a2a1fea29ff652b77561d92e1e8683d2",
+  "genesis_block": "00000a237b793f047e553def81077e61d79655fdaf51888d0fb9ca65d84061b2",
+
+  // Fetch blocks from <index>
+  "fetch_blocks_from": 0,
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": true,
+
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  // TXOUTSET : retreive from gettxoutsetinfo api call
+  "supply": "TXOUTSET",
+
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "getnetworkhashps",
+
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "M",
+
+  // Address labels
+  // example : "dHDUzYmiTqeydcg9BsgU293sJmoLrLwMjF": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information
+  "labels": {
+  //  "dHDUzYmiTqeydcg9BsgU293sJmoLrLwMjF": {"label": "Developers address", "type":"primary", "url":"http://example.com"},
+  //  "dHDUzYmiTqeydcg9BsgU293sJmoLrLwMjF": {"label": "Cryptsy"}
+  }
+}
