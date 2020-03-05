@@ -31,7 +31,7 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/SigwoTechnologies/explorer
+    git clone https://github.com/dngrcoin/dngrexplorer.git
 
 ### Install node modules
 
