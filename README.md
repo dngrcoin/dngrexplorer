@@ -7,8 +7,8 @@ An open source block explorer written in node.js.
 
 ### Requires
 
-*  node.js >= 0.10.28
-*  mongodb 2.6.x
+*  node.js >= 0.12.18
+*  mongodb >=3.6.x
 *  *coind
 
 ### Create database
