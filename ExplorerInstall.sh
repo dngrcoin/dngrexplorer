@@ -2,7 +2,7 @@
 
 # Simple script for install dangrexplorer from sudo user
 sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install curl mc nano git pwgen libkrb5-dev curl apt-transport-https htop
+sudo apt-get install mc nano git pwgen libkrb5-dev curl apt-transport-https htop
 
 #install dngrcoind
 wget https://raw.githubusercontent.com/dngrcoin/dngrcoin/master/DNGRinstall.sh
