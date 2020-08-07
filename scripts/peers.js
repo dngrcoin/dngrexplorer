@@ -32,7 +32,7 @@ mongoose.connect(dbString, function(err) {
             // peer already exists
             loop.next();
           } else {
-            request({uri: 'https://extreme-ip-lookup.com/json/' + address, json: true}, function (error, response, geo) {
+            request({uri: 'http://ipwhois.app/json/' + address, json: true}, function (error, response, geo) {
               db.create_peer({
                 address: address,
                 protocol: body[i].version,
