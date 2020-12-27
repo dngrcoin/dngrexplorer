@@ -93,7 +93,7 @@ block market_view
                   td
                     =parseFloat(order.total).toFixed(8)
                   td.hidden-xs
-                    =(new Date(order.created_at).toUTCString())
+                    =(new Date(order.created_at * 1000).toUTCString())
               else
                 tr.danger 
                   td.hidden-xs
